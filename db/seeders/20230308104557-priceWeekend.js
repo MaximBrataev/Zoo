@@ -2,7 +2,7 @@
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  async up(queryInterface, Sequelize) {
+  async up(queryInterface) {
     await queryInterface.bulkInsert(
       'priceWeekends',
       [
@@ -25,7 +25,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          category: '*',
+          category: 'Дети до 5 лет и ветераны ВОВ',
           price: 'Бесплатно',
           createdAt: new Date(),
           updatedAt: new Date(),
@@ -35,7 +35,7 @@ module.exports = {
     );
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.bulkDelete('priceWeekends', null, {});
   },
 };

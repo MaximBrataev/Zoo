@@ -1,6 +1,7 @@
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
 
+// eslint-disable-next-line consistent-return
 function renderComponent(
   reactComponent,
   props = {},
