@@ -3,23 +3,33 @@ module.exports = function Header() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark ">
       <div className="container-fluid">
-        <div className="collapse navbar-collapse" id="navbarSupportedContent ">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <a
-                className="nav-link active text-light"
-                aria-current="page"
-                href="/"
-              >
-                Home
+        <div className="header" id="navbarSupportedContent ">
+          <div className="navbar-nav me-auto mb-2 mb-lg-0">
+            <div className="headerLogoDiv">
+              <a className="ZooLogo" aria-current="page" href="/">
+                <img
+                  className="headerLogo"
+                  src="https://img.icons8.com/ios-filled/512/group-of-animals.png"
+                  alt="headerLogo"
+                />
               </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link text-light" href="/students">
-                Students
+            </div>
+            <div className="nav-item">
+              <a className="nav-link text-light" href="/animals">
+                ЖИВОТНЫЕ
               </a>
-            </li>
-          </ul>
+            </div>
+            <div className="nav-item">
+              <a className="nav-link text-light" href="/guests">
+                ПОСЕТИТЕЛЯМ
+              </a>
+            </div>
+            <div className="nav-item">
+              <a className="nav-link text-light" href="/about">
+                О ЗООПАРКЕ
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </nav>

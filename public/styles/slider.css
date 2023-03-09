@@ -1,0 +1,55 @@
+.utomatica {
+  margin: 0 auto;
+  overflow: hidden;
+  width: 780px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.sliderauto:nth-child(1) {
+  color: #100f0f;
+  background: url('Ссылка на изображение №1');
+  background-size: cover;
+}
+.sliderauto:nth-child(2) {
+  color: #100f0f;
+  background: url('Ссылка на изображение №2');
+  background-size: cover;
+}
+.sliderauto:nth-child(3) {
+  color: #100f0f;
+  background: url('Ссылка на изображение №3');
+  background-size: cover;
+}
+
+.utomaticaSlider {
+  white-space: nowrap;
+  transition: ease 1s;
+}
+
+.sliderauto {
+  display: inline-block;
+  height: 330px;
+  width: 100%;
+}
+
+/* Кнопки */
+
+.kutomhouga {
+  text-align: center;
+}
+
+.utomaticaDot {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: #ede7e7;
+}
+
+.utomaticaDot.active {
+  background-color: #0183ff;
+}

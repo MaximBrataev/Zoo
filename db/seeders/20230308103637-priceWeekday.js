@@ -25,7 +25,7 @@ module.exports = {
           updatedAt: new Date(),
         },
         {
-          category: '*',
+          category: 'Дети до 5 лет и ветераны ВОВ',
           price: 'Бесплатно',
           createdAt: new Date(),
           updatedAt: new Date(),

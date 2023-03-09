@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@600&family=IBM+Plex+Mono&display=swap');
+
+body {
+  font-family: 'Golos Text', sans-serif;
+  margin: 0 auto;
+}
+
+.header {
+  width: auto;
+  height: 80px;
+  left: 0;
+  right: 0;
+  background-color: #006455;
+  display: flex;
+  margin: 0 auto;
+  top: 0;
+  z-index: 2;
+  position: fixed;
+}
+
+.headerLogo {
+  height: 50px;
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+.text-light {
+  color: white;
+}
+
+.nav-item {
+  display: flex;
+  margin-left: 100px;
+}
+
+.nav-link {
+  margin-right: 41px;
+  margin-top: 28px;
+  text-decoration: none;
+  color: white;
+  opacity: 0.6;
+  text-transform: uppercase;
+  font-size: 21px;
+  font-weight: 600;
+  white-space: nowrap;
+  letter-spacing: -0.01em;
+}
+
+.nav-link:hover {
+  color: white;
+  opacity: 1;
+}
+
+.nav-link:active {
+  color: white;
+  opacity: 1;
+  margin-left: 0;
+  border-bottom: 3px solid white;
+}
+
+.navbar-nav {
+  display: flex;
+}
