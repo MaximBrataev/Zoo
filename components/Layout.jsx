@@ -1,7 +1,8 @@
 const React = require('react');
 const Header = require('./Header');
+const Footer = require('./Footer')
 
-module.exports = function SiteFormCreate({ title, children }) {
+module.exports = function Layout({ title, children }) {
   return (
     <html lang="en">
       <head>
@@ -11,7 +12,7 @@ module.exports = function SiteFormCreate({ title, children }) {
       <body>
         <Header />
         {children}
-        <h1>Выведи эту хрень</h1>
+        <Footer />
       </body>
     </html>
   );
