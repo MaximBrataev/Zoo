@@ -1,5 +1,9 @@
 const React = require('react');
-function Footer({}) {
+
+
+
+
+function Footer({ }) {
   return (
     <div className="footer">
       <a className="adminLogo" href="/admin/login">

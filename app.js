@@ -1,26 +1,19 @@
 require('@babel/register');
 const express = require('express');
-
-// const { sequelize } = require('./db/models/index');
-const app = express();
-const path = require('path');
-
 const morgan = require('morgan');
-// const { sequelize } = require('./db/models/index');
-
-const app = express();
-const route1 = require('./routes/route1');
-const registration = require('./routes/registration');
+const path = require('path');
+const indexRouter = require('./routes/index.route');
 const reactComponent = require('./middleware/renderComponent');
 
+const app = express();
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(reactComponent);
-app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', route1);
-app.use('/', registration);
+app.use('/', indexRouter);
 
 const PORT = process.env.PORT ?? 4000;
 
