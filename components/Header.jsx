@@ -31,6 +31,7 @@ module.exports = function Header() {
             </div>
           </div>
         </div>
+      <div id='logOut'></div>
       </div>
     </nav>
   );

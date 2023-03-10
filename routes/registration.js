@@ -1,25 +1,27 @@
 const express = require('express');
 const bcrypt = require('bcrypt');
 const Registration = require('../components/Registration');
-const { User: Admin } = require('../db/models');
+const { Admin } = require('../db/models');
 
 const router = express.Router();
 
-router.get('/reg', (req, res) => {
+router.get('/admin/login', (req, res) => {
   res.renderComponent(Registration, { title: 'Вход администратора' });
 });
 
-router.post('/reg', async (req, res) => {
+router.post('/admin/login', async (req, res) => {
   try {
-    const { password, password2, name, email } = req.body;
-    if (password && password2 && name && email) {
+    const { password, password2, email } = req.body;
+
+    if (password && password2 && email) {
       if (password === password2) {
-        const emailUser = await Admin.findOne({ where: { email } });
-        if (!emailUser) {
-          const hash = await bcrypt.hash(password, 10);
-          const newUser = await Admin.create({ name, email, password: hash });
-          req.session.userId = newUser.id;
-          res.json({ message: 'ok' });
+        const admin = await Admin.findOne({ where: { email } });
+
+        if (admin) {
+          const validPass = await bcrypt.compare(password, admin.password);
+          if (validPass && admin.email === email) {
+            res.json({ message: 'ok' });
+          }
         } else {
           res.json({ message: 'Такой email уже существует' });
         }
@@ -34,14 +36,14 @@ router.post('/reg', async (req, res) => {
   }
 });
 
-router.get('/logout', (req, res) => {
-  req.session.destroy((error) => {
-    if (error) {
-      return res.status(500).json({ message: 'Ошибка при удалении сессии' });
-    }
-    res.app.locals = {};
-    res.clearCookie('user_sid').redirect('/');
-  });
-});
+// router.get('/admin/logout', (req, res) => {
+//   req.session.destroy((error) => {
+//     if (error) {
+//       return res.status(500).json({ message: 'Ошибка при удалении сессии' });
+//     }
+//     res.app.locals = {};
+//     res.clearCookie('user_sid').redirect('/');
+//   });
+// });
 
 module.exports = router;

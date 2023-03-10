@@ -4,58 +4,60 @@ const Layout = require('./Layout');
 const Reg = ({ title }) => {
   return (
     <Layout title={title}>
-      <div>
-        <form action="/auth/reg" method="POST" id="formReg">
-          <div className="mb-3">
-            <label for="name" className="form-label">
-              Имя{' '}
-            </label>
-            <input
-              type="text"
-              className="form-control"
-              id="name"
-              aria-describedby="emailHelp"
-              name="name"
-            />
-          </div>
-          <div className="mb-3">
-            <label for="email" className="form-label">
-              Почта
-            </label>
+      <div className="registration">
+        <form className="form" action="/admin/login" method="POST" id="formReg">
+        
+          <div className="form-floating mb-3 inp">
+            <div>
+              <label className="emPas" for="floatingInput">
+                Email address{' '}
+              </label>
+            </div>
             <input
               type="email"
-              className="form-control"
-              id="email"
+              className="form-control writeZone"
+              id="floatingInput"
               name="email"
+              placeholder="name@example.com"
             />
           </div>
-          <div className="mb-3">
-            <label for="password" className="form-label">
-              Пароль
-            </label>
+          <div className="form-floating inp">
+            <div>
+              <label className="emPas" for="floatingPassword">
+                Password{' '}
+              </label>
+            </div>
             <input
               type="password"
-              className="form-control"
-              id="password"
+              className="form-control writeZone"
+              id="floatingPassword"
               name="password"
+              placeholder="Password"
             />
           </div>
-          <div className="mb-3">
-            <label for="password2" className="form-label">
-              повтори Пароль
-            </label>
+          <div className="form-floating inp">
+            <div>
+              <label className="emPas" for="floatingPassword">
+                Password 2{' '}
+              </label>
+            </div>
             <input
               type="password"
-              className="form-control"
-              id="password2"
+              className="form-control writeZone"
+              id="floatingPassword2"
               name="password2"
+              placeholder="Password2"
             />
           </div>
-          <button type="submit" className="btn btn-primary">
-            СОХРАНИ
-          </button>
+          <div className="form-floating inp">
+            <input
+              type="submit"
+              className="form-control btn"
+              id="floatingSubmit"
+              placeholder="Password"
+            />
+          </div>
         </form>
-        <h2 className="error"></h2>
       </div>
     </Layout>
   );
