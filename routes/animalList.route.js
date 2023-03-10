@@ -3,20 +3,26 @@ const AnimalList = require('../components/AnimalList');
 
 const router = express.Router();
 
-const { Animal } = require('../db/models');
+const { Animal, Gallery, Admin } = require('../db/models');
 
 router.get('/', async (req, res) => {
   try {
     const animals = await Animal.findAll({
       raw: true,
-      include: { model: 'Galleries' },
     });
-
+    const gallery = await Gallery.findAll({
+      raw: true,
+    });
+    const admin = await Admin.findAll({ raw: true });
     res.renderComponent(AnimalList, {
-      title: 'Как назовём?',
+      title: 'Урюпиский Государственный',
       animals,
+      gallery,
+      admin
     });
   } catch (error) {
     res.send(console.log(error.message));
   }
 });
+
+module.exports = router;

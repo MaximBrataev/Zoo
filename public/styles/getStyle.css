@@ -1,0 +1,105 @@
+
+
+#divAnimals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 160px;
+  background-image: url(/public/logo/back.jpeg);
+}
+.anya {
+  padding: 1%;
+  position: relative;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.anya2 {
+  width: 300px !important;
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 1s; */
+}
+
+.footer {
+  width: auto;
+  height: 80px;
+  left: 0;
+  right: 0;
+  background-color: #006455;
+  display: flex;
+  margin: 0 auto;
+  bottom: 0;
+  z-index: 2;
+  position: fixed;
+}
+
+.adminLogo {
+  position: absolute;
+  width: 40px;
+  top: 17px;
+  right: 50px;
+}
+
+.registration {
+  margin-top: 200px;
+}
+
+.form-control {
+  width: 200px;
+}
+
+.form {
+  background-color: #006455;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1.5px solid black;
+  border-radius: 20px;
+  margin: 200px 0px 0px 600px;
+  width: 300px;
+}
+
+.inp {
+  margin-top: 15px;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+.btn {
+  border-radius: 20px;
+  margin-top: 10px;
+  height: 30px;
+  background-color: rgb(35, 164, 31);
+  color: rgb(215, 207, 207);
+}
+
+.writeZone {
+  border-radius: 20px;
+  width: 250px;
+  height: 30px;
+  margin-top: 5px;
+}
+.emPas {
+  color: rgb(215, 207, 207);
+}
+.card-body {
+  
+  font-size: 25px;
+}
+.card-title {
+  color: red;
+}
+
+.redir {
+  text-decoration: none;
+}
+
+
+.trash {
+  width: 20px;
+}

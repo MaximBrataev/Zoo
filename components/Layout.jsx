@@ -2,13 +2,15 @@ const React = require('react');
 const Header = require('./Header');
 const Footer = require('./Footer')
 
-module.exports = function Layout({ title, children }) {
+module.exports = function Layout({ title, children , admin}) {
   return (
     <html lang="en">
       <head>
         <meta charSet="UTF-8" />
         <link rel="stylesheet" href="/styles/style.css" />
+        <link rel="stylesheet" href="/styles/getStyle.css" />
         <link rel="stylesheet" href="/styles/slider.css" />
+        <script defer src="/js/reg.js" />
         <script defer src="https://unpkg.com/react/umd/react.development.js" />
         <script
           defer
@@ -19,7 +21,7 @@ module.exports = function Layout({ title, children }) {
       <body>
         <Header />
         {children}
-        <Footer />
+        <Footer admin={admin}/>
       </body>
     </html>
   );
