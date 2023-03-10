@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-const Reg = ({ title }) => {
+const Reg = ({ title, adminId }) => {
   return (
-    <Layout title={title}>
+    <Layout title={title} adminId={adminId}>
       <div className="registration">
         <form className="form" action="/admin/login" method="POST" id="formReg">
         
@@ -59,6 +59,7 @@ const Reg = ({ title }) => {
           </div>
         </form>
       </div>
+      <div className='error'></div>
     </Layout>
   );
 };

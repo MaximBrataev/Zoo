@@ -1,9 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-const Home = ({ title }) => {
+const Home = ({ title , adminId}) => {
   return (
-    <Layout title={title}>
+    <Layout title={title} adminId={adminId}>
       <div className='main'>
         <h1>Урюпинский государственный Зоопарк</h1>
       </div>

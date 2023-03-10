@@ -53,3 +53,8 @@
 .utomaticaDot.active {
   background-color: #0183ff;
 }
+
+#addC {
+  display: flex;
+  align-items: flex-end;
+}
