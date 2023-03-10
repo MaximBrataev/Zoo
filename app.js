@@ -3,6 +3,7 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const indexRouter = require('./routes/index.route');
+const registration = require('./routes/registration');
 
 const homeRouter = require('./routes/homeRoute');
 const reactComponent = require('./middleware/renderComponent');
@@ -23,7 +24,7 @@ app.use(reactComponent);
 app.use('/', indexRouter);
 
 app.use('/', homeRouter);
-// app.use('/', registration);
+app.use('/', registration);
 
 
 const PORT = process.env.PORT ?? 4000;

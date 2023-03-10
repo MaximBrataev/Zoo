@@ -20,16 +20,17 @@ router.post('/admin/login', async (req, res) => {
         if (admin) {
           const validPass = await bcrypt.compare(password, admin.password);
           if (validPass && admin.email === email) {
+            res.app.locals.adminId = admin.id;
             res.json({ message: 'ok' });
           }
         } else {
-          res.json({ message: 'Такой email уже существует' });
+          res.json({ message: 'Email введен не верно!' });
         }
       } else {
-        res.json({ message: 'Ваши пароли не совпадают' });
+        res.json({ message: 'Пароль введен не верно!' });
       }
     } else {
-      res.json({ message: 'Заполните все поля' });
+      res.json({ message: 'Заполните все поля!' });
     }
   } catch (error) {
     res.json({ message: error.message });
