@@ -1,11 +1,13 @@
 
-
 #divAnimals {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 160px;
+
+  margin-bottom: 100px;
+
   background-image: url(/public/logo/back.jpeg);
 }
 .anya {
@@ -14,8 +16,15 @@
   overflow: hidden;
   margin-right: 10px;
 }
-.anya2 {
+
+.divImg {
   width: 300px !important;
+  height: 200px;
+}
+.anya2 {
+  width: 100%;
+  height: 100%;
+
   /* position: absolute;
   top: 0;
   left: 0;
@@ -88,7 +97,7 @@
   color: rgb(215, 207, 207);
 }
 .card-body {
-  
+
   font-size: 25px;
 }
 .card-title {
@@ -100,6 +109,24 @@
 }
 
 
+.main {
+  display: flex;
+  flex-direction: row;
+  margin-top: 110px;
+  justify-content: center;
+  align-items: center;
+}
+
+.main2 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+
+
 .trash {
   width: 20px;
+
 }
