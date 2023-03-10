@@ -1,9 +1,20 @@
 const React = require('react');
 
-const AnimalCard = ({ animal }) => {
+const AnimalCard = ({ animal, gallery }) => {
+  const photos = gallery.filter((photo) => photo.animalId === animal.id);
+  //console.log(photos, '=1===1=', animal.id);
   return (
-    <div className='card' style={{ width: '18rem' }}>
-      {/* <img src={animal.img} className="card-img-top" alt="..."/> */}
+    <div className='card anya' style={{ width: '18rem' }}>
+      <div className='divImg'>
+        {photos.length > 0 && (
+          <img
+            src={photos[1].photo}
+            className='card-img-top anya2'
+            alt='photoOfAnimal'
+          />
+        )}
+      </div>
+
       <div className='card-body'>
         <h5 className='card-title'>{animal.name}</h5>
       </div>
@@ -11,4 +22,4 @@ const AnimalCard = ({ animal }) => {
   );
 };
 
-module.export = AnimalCard;
+module.exports = AnimalCard;
