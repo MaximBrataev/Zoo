@@ -1,5 +1,6 @@
 const React = require('react');
 
+
 const AnimalCard = ({ animal, gallery, adminId }) => {
   const photos = gallery.filter((photo) => photo.animalId === animal.id);
 
@@ -18,11 +19,13 @@ const AnimalCard = ({ animal, gallery, adminId }) => {
       <div className="card-body">
         <h5 className="card-title">{animal.name}</h5>
 
+
         {adminId &&
           <a href={`/animals/:animalId`} className="trashUrl">
             <img className="trash" alt="trash" src="/logo/trash.png" />
           </a>
           }
+
       </div>
     </div>
   );
