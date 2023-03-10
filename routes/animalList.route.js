@@ -3,9 +3,7 @@ const AnimalList = require('../components/AnimalList');
 
 const router = express.Router();
 
-
 const { Animal, Gallery, Admin } = require('../db/models');
-
 
 router.get('/', async (req, res) => {
   try {
@@ -22,8 +20,7 @@ router.get('/', async (req, res) => {
       title: 'Урюпиский Государственный',
       animals,
       gallery,
-      admin
-
+      admin,
     });
   } catch (error) {
     res.send(console.log(error.message));
