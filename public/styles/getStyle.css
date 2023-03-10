@@ -24,6 +24,7 @@
 .anya2 {
   width: 100%;
   height: 100%;
+  border-radius: 13px;
 
   /* position: absolute;
   top: 0;
@@ -50,12 +51,15 @@
 .adminLogo {
   position: absolute;
   width: 40px;
-  top: 17px;
+  top: 8px;
   right: 50px;
 }
 
 .registration {
-  margin-top: 200px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* margin-left: 80px; */
 }
 
 .form-control {
@@ -101,7 +105,7 @@
   font-size: 25px;
 }
 .card-title {
-  color: red;
+  color: rgb(139, 96, 96);
 }
 
 .redir {
@@ -124,9 +128,29 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
+}
 
 
 .trash {
   width: 20px;
 
+}
+
+.error {
+  text-align: center;
+}
+
+.footer{
+  display: flex;
+  flex-direction: column;
+justify-content: flex-end;
+}
+
+#foo {
+  position: absolute;
+  width: 40px;
+  top: 35px;
+  right: 50px;
+
+  color: white;
 }

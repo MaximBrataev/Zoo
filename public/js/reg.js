@@ -1,6 +1,5 @@
 const formRegistration = document.querySelector('#formReg');
 
-
 if (formRegistration) {
   formRegistration.addEventListener('submit', async (event) => {
     event.preventDefault();
@@ -20,7 +19,7 @@ if (formRegistration) {
 
     const answer = await resOfReq.json();
     if (answer.message === 'ok') {
-      window.location.assign('/animals');
+      window.location.assign('/');
     } else {
       document.querySelector('.error').innerHTML = answer.message;
     }
